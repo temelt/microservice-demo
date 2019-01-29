@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: ms_route
+        uri: http://www.temel.com
+        predicates:
+        - Path=/ms
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

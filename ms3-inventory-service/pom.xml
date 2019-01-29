@@ -60,5 +60,12 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>spring-boot-starter-swagger</artifactId>
+            <version>1.5.1.RELEASE</version>
+        </dependency>
+
     </dependencies>
 </project>
