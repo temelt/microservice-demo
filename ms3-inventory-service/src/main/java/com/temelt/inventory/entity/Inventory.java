@@ -14,7 +14,7 @@ import java.math.BigDecimal;
  */
 @Data
 @Entity
-@Table
+@Table(name = "inventory")
 @EqualsAndHashCode(callSuper = false)
 public class Inventory implements Serializable {
     @Id
@@ -29,7 +29,7 @@ public class Inventory implements Serializable {
     @NotNull
     private String barcode;
 
-    @Column(name = "available_amount", precision = 2, scale = 18)
+    @Column(name = "available_amount", precision = 18, scale = 2)
     private BigDecimal availableAmount;
 
     @Enumerated(value = EnumType.STRING)

@@ -9,7 +9,7 @@ spring:
     name: ms2-shipping-service
 
 server:
-  port: 62512
+  port: ${PORT:62512}
 
 eureka: 
   client:

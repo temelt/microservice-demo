@@ -1,3 +1,5 @@
+server:
+  port: 62512
 spring:
   application:
     name: ms2-shipping-service

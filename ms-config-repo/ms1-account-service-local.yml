@@ -9,7 +9,7 @@ spring:
     name: ms1-account-service
 
 server:
-  port: ${SERVER_PORT:62511}
+  port: ${PORT:62511}
 
 eureka: 
   client:

@@ -1,3 +1,5 @@
+server:
+  port: 62511
 spring:
   application:
     name: ms1-account-service

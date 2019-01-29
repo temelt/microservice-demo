@@ -15,7 +15,7 @@ import java.util.Date;
  */
 @Data
 @Entity
-@Table
+@Table(name = "account")
 @EqualsAndHashCode(callSuper = false)
 public class Account implements Serializable {
 

@@ -9,7 +9,7 @@ spring:
     name: ms3-inventory-service
 
 server:
-  port: ${SERVER_PORT:62513}
+  port: ${PORT:62513}
 
 eureka: 
   client:

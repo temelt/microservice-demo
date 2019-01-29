@@ -16,7 +16,7 @@ import java.util.Date;
  */
 @Data
 @Entity
-@Table
+@Table(name = "shipping")
 @EqualsAndHashCode(callSuper = false)
 public class Shipping implements Serializable {
 
@@ -32,7 +32,7 @@ public class Shipping implements Serializable {
     @NotNull
     private Long accountId;
 
-    @Column(name = "amount", precision = 2, scale = 16)
+    @Column(name = "amount", precision = 16, scale = 2)
     @NotNull
     private BigDecimal amount;
 

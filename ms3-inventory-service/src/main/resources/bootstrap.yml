@@ -1,3 +1,5 @@
+server:
+  port: 62513
 spring:
   application:
     name: ms3-inventory-service

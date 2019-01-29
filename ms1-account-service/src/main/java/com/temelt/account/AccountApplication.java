@@ -20,8 +20,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableEurekaClient
 public class AccountApplication {
-    @Autowired
-    ResourcePatternResolver resourceResolver;
 
     public static void main(String[] args) {
         SpringApplication.run(AccountApplication.class, args);
