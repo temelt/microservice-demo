@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: @application.name@
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/durdufatih/config-server-tutorial.git
+    profiles:
+      active: local
+
+info:
+  build:
+    name: @application.name@
+    group: @project.groupId@
+    artifact: @project.artifactId@
+    version: @project.version@
+
+spring.profiles: local

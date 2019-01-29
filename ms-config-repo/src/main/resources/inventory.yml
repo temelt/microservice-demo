@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    data-username: inventory
+    data-password: inventory
+    url: jdbc:h2:mem:inventorydb
