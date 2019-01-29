@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    data-username: shipping
+    data-password: shipping
+    url: jdbc:h2:mem:shippingdb
+
+  application:
+    name: ms2-shipping-service
+
+server:
+  port: ${SERVER_PORT:62512}
+
+eureka: 
+  client:
+    serviceUrl: 
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62511}/eureka/

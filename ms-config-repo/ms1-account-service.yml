@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    data-username: account
+    data-password: account
+    url: jdbc:h2:mem:accountdb
+
+  application:
+    name: ms1-account-service
+
+server:
+  port: ${SERVER_PORT:62511}
+
+  eureka: 
+client:
+  serviceUrl: 
+  defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62511}/eureka/

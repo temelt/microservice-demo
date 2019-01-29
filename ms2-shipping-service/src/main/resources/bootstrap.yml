@@ -1,11 +1,11 @@
 spring:
   application:
-    name: ms1-account-service
+    name: '@application.name@'
   profiles:
     active: native
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://localhost:62500
       failFast: true
       label: ""
 

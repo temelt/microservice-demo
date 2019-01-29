@@ -12,6 +12,7 @@
 		<module>ms-common-module</module>
 		<module>ms-config-server</module>
 		<module>ms-config-repo</module>
+		<module>ms-zipkin-server</module>
 	</modules>
 
 	<parent>

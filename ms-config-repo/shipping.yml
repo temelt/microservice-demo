@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    driver-class-name: org.h2.Driver
-    data-username: shipping
-    data-password: shipping
-    url: jdbc:h2:mem:shippingdb
