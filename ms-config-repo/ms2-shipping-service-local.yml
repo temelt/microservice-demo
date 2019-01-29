@@ -9,9 +9,9 @@ spring:
     name: ms2-shipping-service
 
 server:
-  port: ${SERVER_PORT:62512}
+  port: 62512
 
 eureka: 
   client:
     serviceUrl: 
-      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62511}/eureka/
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62512}/eureka/

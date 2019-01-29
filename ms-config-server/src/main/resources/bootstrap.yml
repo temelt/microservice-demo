@@ -7,7 +7,7 @@ spring:
     config:
       server:
         native:
-          search-locations: file://${project.basedir}/ms-config-repo
+          search-locations: classpath:/ms-config-repo
 info:
   build:
     name: @application.name@

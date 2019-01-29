@@ -6,12 +6,12 @@ spring:
     url: jdbc:h2:mem:inventorydb
 
   application:
-    name: application
+    name: ms3-inventory-service
 
 server:
-  port: ${SERVER_PORT:8010}
+  port: ${SERVER_PORT:62513}
 
 eureka: 
   client:
     serviceUrl: 
-      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62513}/eureka/

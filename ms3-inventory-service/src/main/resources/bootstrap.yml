@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms2-shipping-service
+    name: ms3-inventory-service
   profiles:
     active: local
   cloud:

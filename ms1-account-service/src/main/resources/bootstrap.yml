@@ -2,16 +2,20 @@ spring:
   application:
     name: ms1-account-service
   profiles:
-    active: native
+    active: local
   cloud:
     config:
       uri: http://localhost:8888
       failFast: true
       label: ""
-
 info:
   build:
     name: '@application.name@'
     group: '@project.groupId@'
     artifact: '@project.artifactId@'
     version: '@project.version@'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:62500/eureka/
