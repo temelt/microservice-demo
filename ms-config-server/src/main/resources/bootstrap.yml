@@ -1,16 +1,13 @@
-server:
-  port: 8888
 spring:
   application:
     name: @application.name@
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/durdufatih/config-server-tutorial.git
-    profiles:
-      active: local
-
+        native:
+          search-locations: file://${project.basedir}/microservice-demo/ms-config-repo
 info:
   build:
     name: @application.name@
@@ -18,4 +15,5 @@ info:
     artifact: @project.artifactId@
     version: @project.version@
 
-spring.profiles: local
+server:
+  port: 8888

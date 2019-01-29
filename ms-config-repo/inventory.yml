@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    data-username: inventory
+    data-password: inventory
+    url: jdbc:h2:mem:inventorydb
+
+  application:
+    name: application
+
+server:
+  port: ${SERVER_PORT:8010}
+
+eureka: 
+  client:
+    serviceUrl: 
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
