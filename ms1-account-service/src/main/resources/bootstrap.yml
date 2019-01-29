@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: '@application.name@'
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:62500
+      failFast: true
+      label: ""
+  datasource:
+    url: jdbc:h2:mem:accountdb
+    driver-class-name: org.h2.Driver
+    data-username: account
+    data-password: account
+
+info:
+  build:
+    name: '@application.name@'
+    group: '@project.groupId@'
+    artifact: '@project.artifactId@'
+    version: '@project.version@'

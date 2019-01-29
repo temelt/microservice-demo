@@ -1,0 +1,23 @@
+[
+  {
+    "_class": "com.temelt.inventory.entity.Inventory",
+    "name": "HP Elitebook 8570w",
+    "availableAmount": 2,
+    "barcode": "0065481126786",
+    "recordState": "COMMITTED"
+  },
+  {
+    "_class": "com.temelt.inventory.entity.Inventory",
+    "name": "HP SpectreX",
+    "barcode": "0065481126745",
+    "availableAmount": 5,
+    "recordState": "COMMITTED"
+  },
+  {
+    "_class": "com.temelt.inventory.entity.Inventory",
+    "name": "HP Elitebook 8570w",
+    "availableAmount": 0,
+    "barcode": "0065481126783",
+    "recordState": "NOT_COMMITTED"
+  }
+]

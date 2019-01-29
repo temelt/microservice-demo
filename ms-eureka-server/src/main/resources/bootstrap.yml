@@ -1,0 +1,20 @@
+server:
+    port: 62500
+spring:
+  application:
+    name: @application.name@
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:62500
+      failFast: true
+      label: ""
+
+info:
+  build:
+    name: @application.name@
+    group: @project.groupId@
+    artifact: @project.artifactId@
+    version: @project.version@
+

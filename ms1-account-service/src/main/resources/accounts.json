@@ -1,0 +1,17 @@
+[
+  {
+    "_class": "com.temelt.account.entity.Account",
+    "accountName" : "John DOE",
+    "recordState"  : "COMMITTED"
+  },
+  {
+    "_class": "com.temelt.account.entity.Account",
+    "accountName" : "Jane DOE",
+    "recordState"  : "COMMITTED"
+  },
+  {
+    "_class": "com.temelt.account.entity.Account",
+    "accountName" : "Mark DOE",
+    "recordState"  : "NOT_COMMITTED"
+  }
+]
