@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ms-eureka-server
+
+server:
+  port: ${PORT:62500}
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 10000
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:62500/eureka/
+  instance:
+    hostname: localhost
+
+info:
+  build:
+    name: @application.name@
+    group: @project.groupId@
+    artifact: @project.artifactId@
+    version: @project.version@

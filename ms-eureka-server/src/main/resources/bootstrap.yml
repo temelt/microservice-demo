@@ -1,28 +1,10 @@
-server:
-  port: 62500
-
 spring:
   application:
-    name:  @application.name@
+    name: ms-eureka-server
+  profiles:
+    active: local
   cloud:
     config:
-      uri: http://localhost:62500
-
-eureka:
-  server:
-    eviction-interval-timer-in-ms: 1000
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:62500/eureka/
-  instance:
-    hostname: localhost
-
-info:
-  build:
-    name: @application.name@
-    group: @project.groupId@
-    artifact: @project.artifactId@
-    version: @project.version@
-
+      uri: http://localhost:8888
+      failFast: true
+      label: ""
