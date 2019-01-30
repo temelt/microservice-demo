@@ -12,7 +12,8 @@
 		<module>ms-common-module</module>
 		<module>ms-config-server</module>
 		<module>ms-zipkin-server</module>
-	</modules>
+        <module>ms-service-base</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
