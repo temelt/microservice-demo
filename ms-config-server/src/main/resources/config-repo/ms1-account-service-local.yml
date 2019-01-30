@@ -8,6 +8,8 @@ spring:
     console:
       enabled: true
       path: /h2-console
+      settings:
+        web-allow-others: true
 
   application:
     name: ms1-account-service
@@ -15,7 +17,7 @@ spring:
 server:
   port: ${PORT:62511}
 
-eureka: 
+eureka:
   client:
-    serviceUrl: 
-      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62511}/eureka/
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:62500}/eureka/
