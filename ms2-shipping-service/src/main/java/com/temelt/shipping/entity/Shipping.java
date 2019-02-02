@@ -10,6 +10,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by temelt on 28.01.2019.
@@ -48,4 +49,7 @@ public class Shipping implements Serializable {
     @Enumerated(value = EnumType.STRING)
     @Column(name = "record_state", length = 30)
     private RecordState recordState = RecordState.NOT_COMMITTED;
+
+    @Column(name = "commit_id")
+    private UUID commitId;
 }

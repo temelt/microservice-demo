@@ -1,16 +1,16 @@
 package com.temelt.shipping;
 
 import com.temelt.common.util.SwaggerUtil;
+import com.temelt.shipping.messaging.ShippingChannel;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
+import org.springframework.web.client.RestTemplate;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -22,6 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableTransactionManagement
 @EnableEurekaClient
 @EnableSwagger2
+@EnableBinding(ShippingChannel.class)
 public class ShippingApplication {
 
     public static void main(String[] args) {
@@ -29,8 +30,13 @@ public class ShippingApplication {
     }
 
     @Bean
-    public ModelMapper getModelMapper(){
+    public ModelMapper getModelMapper() {
         return new ModelMapper();
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 
     @Bean

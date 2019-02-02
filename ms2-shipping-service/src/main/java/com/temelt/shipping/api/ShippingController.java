@@ -16,7 +16,7 @@ import java.util.Optional;
  * Created by temelt on 28.01.2019.
  */
 @RestController
-@RequestMapping("/inventory")
+@RequestMapping("/shipping")
 @Api(value = "Shipping APIs")
 public class ShippingController {
 
