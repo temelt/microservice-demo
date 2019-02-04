@@ -12,7 +12,9 @@ This project was prepared for educational purposes. It is open for contribution 
 - Spring Cloud Netflix - Eureka
 - Spring Cloud Config Server
 - Spring Cloud Api Gateway
+- Spring Cloud Messaging
 - Zipkin
+- Apache Kafka
 - Spring Data-JPA (H2)
 - Swagger2
 - Lombok
