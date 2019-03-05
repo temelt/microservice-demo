@@ -1,9 +1,9 @@
 spring:
   application:
-    name: ms-eureka-server
+    name: ms-hystrix-dashboard
 
 server:
-  port: ${PORT:62500}
+  port: ${PORT:62501}
 
 eureka:
   server:
@@ -15,4 +15,5 @@ eureka:
       defaultZone: http://localhost:62500/eureka/
   instance:
     hostname: localhost
+
 

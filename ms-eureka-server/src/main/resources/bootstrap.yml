@@ -8,3 +8,10 @@ spring:
       uri: http://localhost:8888
       failFast: true
       label: ""
+
+info:
+  build:
+    name: @application.name@
+    group: @project.groupId@
+    artifact: @project.artifactId@
+    version: @project.version@

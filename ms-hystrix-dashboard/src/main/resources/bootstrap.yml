@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-hystrix-dashboard
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:8888
+      failFast: true
+      label: ""
+info:
+  build:
+    name: '@application.name@'
+    group: '@project.groupId@'
+    artifact: '@project.artifactId@'
+    version: '@project.version@'
