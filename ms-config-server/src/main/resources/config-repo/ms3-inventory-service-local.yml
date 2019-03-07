@@ -8,6 +8,12 @@ spring:
   application:
     name: ms3-inventory-service
 
+  zipkin:
+    base-url: http://localhost:62503/
+  sleuth:
+    sampler:
+      probability: 1
+      
 server:
   port: ${PORT:62513}
 

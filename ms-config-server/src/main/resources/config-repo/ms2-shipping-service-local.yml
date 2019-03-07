@@ -3,6 +3,11 @@ server:
 spring:
   application:
       name: ms2-shipping-service
+  zipkin:
+    base-url: http://localhost:62503/
+  sleuth:
+    sampler:
+      probability: 1
   datasource:
     driver-class-name: org.h2.Driver
     data-username: shipping
