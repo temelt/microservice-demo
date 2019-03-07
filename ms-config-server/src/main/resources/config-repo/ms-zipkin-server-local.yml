@@ -12,3 +12,13 @@ eureka:
 
 server:
   port: 62503
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

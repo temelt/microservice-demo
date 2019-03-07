@@ -10,9 +10,13 @@ spring:
       path: /h2-console
       settings:
         web-allow-others: true
-
   application:
     name: ms1-account-service
+  zipkin:
+    base-url: http://localhost:62503/
+  sleuth:
+    sampler:
+      probability: 1
 
 server:
   port: ${PORT:62511}
