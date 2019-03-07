@@ -1,10 +1,12 @@
 package com.temelt.account.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.temelt.account.entity.Account;
 import com.temelt.account.repo.AccountRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +31,9 @@ public class AccountService {
         return accountRepository.findById(id);
     }
 
+    @HystrixCommand(
+            fallbackMethod = "emptyAccountList"
+    )
     public List<Account> getAll() {
         return accountRepository.findAll();
     }
@@ -36,5 +41,9 @@ public class AccountService {
     @Transactional
     public void update(Account account) {
         accountRepository.save(account);
+    }
+
+    private List<Account> emptyAccountList(){
+        return Collections.EMPTY_LIST;
     }
 }

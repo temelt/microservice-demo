@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.h2.Driver
     data-username: account
     data-password: account
-    url: jdbc:h2:mem:accountdb
+    url: jdbc:h2:mem:accountdb;DB_CLOSE_ON_EXIT=FALSE
   h2:
     console:
       enabled: true

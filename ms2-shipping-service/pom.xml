@@ -6,10 +6,22 @@
         <artifactId>ms-service-base</artifactId>
         <groupId>com.temelt</groupId>
         <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../ms-service-base/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ms2-shipping-service</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

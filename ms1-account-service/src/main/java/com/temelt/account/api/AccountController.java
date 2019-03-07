@@ -21,15 +21,15 @@ public class AccountController {
 
     private final AccountService accountService;
 
-    public AccountController(AccountService accountService){
-        this.accountService=accountService;
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
     }
 
     @GetMapping("{id}")
     @ApiOperation(value = "Get Account By Id")
     public ResponseEntity<?> getById(@RequestParam(name = "id") Long id) {
         Optional<Account> account = accountService.getById(id);
-        return account.isPresent() ? ResponseEntity.ok(account.get()): ResponseEntity.notFound().build();
+        return account.isPresent() ? ResponseEntity.ok(account.get()) : ResponseEntity.notFound().build();
     }
 
     @PostMapping

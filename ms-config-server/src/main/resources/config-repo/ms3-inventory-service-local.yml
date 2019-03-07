@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.h2.Driver
     data-username: inventory
     data-password: inventory
-    url: jdbc:h2:mem:inventorydb
+    url: jdbc:h2:mem:inventorydb;DB_CLOSE_ON_EXIT=FALSE
 
   application:
     name: ms3-inventory-service

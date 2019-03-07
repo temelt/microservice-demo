@@ -6,9 +6,11 @@
         <artifactId>ms-service-base</artifactId>
         <groupId>com.temelt</groupId>
         <version>1.0.1-SNAPSHOT</version>
+        <relativePath>../ms-service-base/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ms3-inventory-service</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
 
 </project>
