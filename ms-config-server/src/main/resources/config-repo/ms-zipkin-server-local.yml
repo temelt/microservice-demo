@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      name: ms-zipkin-server
+      discovery:
+        service-id: config
+        enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:62500/eureka/
+
+server:
+  port: 62503
