@@ -3,7 +3,9 @@ package com.temelt.inventory;
 import com.temelt.common.util.SwaggerUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -24,6 +26,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableTransactionManagement
 @EnableEurekaClient
 @EnableSwagger2
+@EnableCircuitBreaker
+@EnableTurbine
 public class InventoryApplication {
 
     public static void main(String[] args) {

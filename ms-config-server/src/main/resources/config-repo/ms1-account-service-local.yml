@@ -17,6 +17,13 @@ spring:
 server:
   port: ${PORT:62511}
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+      base-path: /
+
 eureka:
   client:
     serviceUrl:
