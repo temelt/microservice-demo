@@ -49,8 +49,8 @@ public class ShippingController {
 
     @PutMapping
     @ApiOperation(value = "Update Shipping")
-    public ResponseEntity<?> update(@RequestBody @Valid Shipping shipping) {
-        shippingService.update(shipping);
+    public ResponseEntity<?> update(@RequestBody @Valid ShippingDto shippingDto) {
+        shippingService.update(shippingDto);
         return ResponseEntity.ok(true);
     }
 
