@@ -41,12 +41,14 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.2.3</version>
+                <version>${docker.plugin.version}</version>
                 <configuration>
-                    <baseImage>openjdk:8-jre-alpine</baseImage>
-                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <exposes>8761</exposes>
-                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <skipDockerBuild>false</skipDockerBuild>
+                    <imageName>${docker.image.prefix}/app.jar</imageName>
+                    <imageTags>
+                        <imageTag>${project.version}</imageTag>
+                    </imageTags>
+                    <dockerDirectory>${project.basedir}/src/main/resources/docker</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>

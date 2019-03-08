@@ -1,6 +1,6 @@
 spring:
   application:
-    name: @application.name@
+    name: ms-config-server
   profiles:
     active: native
   cloud:
