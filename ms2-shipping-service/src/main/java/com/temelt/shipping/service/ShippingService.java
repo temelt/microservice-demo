@@ -51,8 +51,20 @@ public class ShippingService {
         return shippingRepository.findAll();
     }
 
-    public void update(Shipping shipping) {
+    public void update(ShippingDto shippingDto) {
+        Shipping shipping = shippingRepository.getOne(shippingDto.getId());
+
+        shipping.setAccountId(shippingDto.getAccountId());
+        shipping.setAmount(shippingDto.getAmount());
+        shipping.setDescription(shippingDto.getDescription());
+        InventoryAmountCheckEvent amountCheckEvent = new InventoryAmountCheckEvent();
+        shipping.setCommitId(amountCheckEvent.getId());
+
         shippingRepository.save(shipping);
+
+        amountCheckEvent.setAmount(shippingDto.getAmount());
+        amountCheckEvent.setInventoryId(shippingDto.getInventoryId());
+        shippingChannel.inventoryAmountCheckOut().send(MessageBuilder.withPayload(amountCheckEvent).build());
     }
 
 
