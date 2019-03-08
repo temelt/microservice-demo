@@ -1,7 +1,7 @@
 # microservice-demo
 
 This Project is POC of Microservice Architecture. Project contains 3 microservices (AccountService,InventoryService, ShippingService), 
-Event Driven Data Management (microservice level transaction management - SAGA) will impl. 
+Event Driven (microservice level transaction management - SAGA) will impl. 
 
 This project was prepared for educational purposes. It is open for contribution :)
 
