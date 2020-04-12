@@ -40,7 +40,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <application.name>${project.artifactId}</application.name>
-        <docker.image.prefix>ttemel</docker.image.prefix>
+        <docker.image.prefix>temelt</docker.image.prefix>
+        <docker.plugin.version>0.4.9</docker.plugin.version>
     </properties>
 
     <repositories>

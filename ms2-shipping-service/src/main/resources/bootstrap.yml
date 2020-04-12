@@ -17,7 +17,10 @@ info:
     artifact: '@project.artifactId@'
     version: '@project.version@'
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:62500/eureka/
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://configserver:8888
+      fail-fast: true
